@@ -1,6 +1,7 @@
 const game = new Game();
-const width = 1000
-const height = 600
+const width = 1000;
+const height = 600;
+
 function preload() {
     game.preloadGame()
 }

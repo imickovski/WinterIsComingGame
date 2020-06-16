@@ -1,8 +1,7 @@
-class Obstacles {
+class Score {
     constructor() {
         this.x = Math.random() * width;
         this.y = 0;
-        this.i = Math.random() * width
         this.width = 80;
         this.height = 60;
     }
@@ -15,21 +14,18 @@ class Obstacles {
         let playerRightSide = player.col + player.width;
         let playerTopSide = player.row;
         let playerBottomSide = player.row + player.heigth;
-        // console.log(playerLeftSide, playerRightSide, playerTopSide,playerBottomSide)
-        //    console.log(player)
-        // console.log(width)
         
         let xCollision =
-        leftSide > playerLeftSide -30  &&
-        leftSide < playerRightSide +30 &&
-        rightSide > playerLeftSide -30 &&
-        rightSide < playerRightSide +30 ;
+        leftSide > playerLeftSide -15  &&
+        leftSide < playerRightSide +15 &&
+        rightSide > playerLeftSide -15 &&
+        rightSide < playerRightSide +15 ;
         
         let yCollision = 
-        topSide > playerTopSide -30 &&
-        topSide < playerBottomSide +30 &&
-        bottomSide > playerTopSide -30 &&
-        bottomSide <playerBottomSide +30;
+        topSide > playerTopSide -15 &&
+        topSide < playerBottomSide +15 &&
+        bottomSide > playerTopSide -15 &&
+        bottomSide <playerBottomSide +15;
 
         if(xCollision && yCollision) {
             return true
@@ -37,9 +33,8 @@ class Obstacles {
             return false;
         }
     }
-    drawingObstacles() {
+    drawingObstaclesForScore() {
         this.y += 2;
-        image(game.aryaImg.src, this.x, this.y, this.width, this.height)
-        // image(game.branImg.src, this.i, this.y, this.width, this.height)
+        image(game.branImg.src, this.x, this.y, this.width, this.height)
     }
 }
