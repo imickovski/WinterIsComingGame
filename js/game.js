@@ -1,3 +1,4 @@
+let theScore = document.querySelector("#score").innerText
 class Game {
     constructor() {
         this.background = new Background();
@@ -19,12 +20,12 @@ class Game {
         // When goes on the right off the canvas
         // Player width is 130
         if(this.player.col > width) {
-            this.player.col = -129 
+            this.player.col = -this.player.width + 10 
         }
         // When goes on the left off the canvas
         // Player width is 130
-        if(this.player.col < -130) {
-            this.player.col = width - 1
+        if(this.player.col < -this.player.width) {
+            this.player.col = width - 10
         }
         // Arya Stark
         if(frameCount % 40 === 0) {
@@ -56,14 +57,12 @@ class Game {
         // For Bran
         this.scores = this.scores.filter((bran) => {
             if(bran.checkCollision(this.player)) {
-               let theScore = document.querySelector("#score").innerText
-                console.log(theScore += 1)
+                // theScore += 1
                 return false;
             }else {
-                // console.log("not colliding")
                 return true;
             }
-
-        })
+        }) 
     }    
 }
+console.log(theScore)

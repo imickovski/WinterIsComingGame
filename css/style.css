@@ -10,3 +10,25 @@ body {
     text-align: center;
     color: #DDDEEC;
 }
+
+.start {
+   width: 200px;
+   height: 50px;
+   font-size: x-large;
+   color: rgb(188, 228, 221);
+   background-color: rgb(79, 79, 134);
+   border: 3px solid rgb(176, 176, 202);
+}
+
+.begin-button {
+    padding-top: 20%;
+    text-align: center;
+    font-size: x-large;
+    color: rgb(188, 228, 221);
+}
+
+.begin-button p {
+    background-color: rgb(38, 53, 70);
+    margin-left: 26%;
+    margin-right: 26%;;
+}
