@@ -1,9 +1,12 @@
 body {
     margin: 0%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("https://wallpaperplay.com/walls/full/c/d/4/68846.jpg");
 }
 
 .tutorial {
     float: right;
     margin-right: 15px;
+    text-align: center;
+    color: #DDDEEC;
 }
