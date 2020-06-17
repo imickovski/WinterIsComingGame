@@ -7,10 +7,14 @@ class Game {
         this.playerScore = 0;
     }
     preloadGame() {
-        this.backgroundImg = {src: loadImage("images/background.jpg")}
-        this.playerImg = {src: loadImage("images/night-king-png.png")}
-        this.aryaImg = {src: loadImage("images/transparent.png")}
+        this.backgroundImg = {src: loadImage("images/background.jpg")};
+        this.playerImg = {src: loadImage("images/night-king-png.png")};
+        this.aryaImg = {src: loadImage("images/transparent.png")};
         this.branImg = {src: loadImage("images/brandon-stark.png")};
+        this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")}
+    }
+    defeatImg(){
+        image(this.aryaWinsImg.src, 0, 0, width, height)
     }
     upgrateScore() {
         this.playerScore++;
@@ -51,11 +55,10 @@ class Game {
             bran.drawingObstaclesForScore();
             bran.checkCollision(this.player)
         });
-
         // For Arya
         this.obstacles = this.obstacles.filter((arya) => {
             if(arya.checkCollision(this.player)) {
-                alert("Game Over")
+                gameStart++;
                 this.resetScore();
                 return false;
             }else {
