@@ -18,13 +18,13 @@ function start() {
 }
 
 function draw() {
-    if(gameStart==true){
+    if(gameStart==true) {
         game.drawingGame();
     }
-    if (keyIsDown(37)){
+    if (keyIsDown(37)) {
         game.player.moveLeft();
     }
-    if(keyIsDown(39)){
+    if (keyIsDown(39)) {
         game.player.moveRight();
     }
 }
