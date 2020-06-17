@@ -11,7 +11,7 @@ class Game {
         this.playerImg = {src: loadImage("images/night-king-png.png")};
         this.aryaImg = {src: loadImage("images/transparent.png")};
         this.branImg = {src: loadImage("images/brandon-stark.png")};
-        this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")}
+        this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")};
     }
     defeatImg(){
         image(this.aryaWinsImg.src, 0, 0, width, height)

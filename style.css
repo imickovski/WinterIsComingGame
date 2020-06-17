@@ -3,6 +3,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: url("background-start-page.jpg");
     position: relative;
+    position: relative;
 }
 
 .tutorial {
@@ -31,11 +32,19 @@ body {
 .begin-button p {
     background-color: rgb(38, 53, 70);
     margin-left: 26%;
-    margin-right: 26%;;
+    margin-right: 26%;
 }
 
 .start-again {
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.start-again p{
+    font-size: x-large;
+    background-color: rgb(38, 53, 70);
+    color: rgb(188, 228, 221);
 }
 
 #try-again {
@@ -48,5 +57,5 @@ body {
     border: 3px solid rgb(176, 176, 202);
     position: absolute;
     margin-top: 500px;
-    margin-left: -100px;
+    margin-left: -230px;
 }
