@@ -26,5 +26,5 @@ function draw() {
     }
     if (keyIsDown(39)) {
         game.player.moveRight();
-    }
+    } 
 }

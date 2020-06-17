@@ -1,16 +1,24 @@
-let theScore = document.querySelector("#score").innerText
 class Game {
     constructor() {
         this.background = new Background();
         this.player = new Player(450, 500);
         this.obstacles = [];
         this.scores = [];
+        this.playerScore = 0;
     }
     preloadGame() {
         this.backgroundImg = {src: loadImage("images/background.jpg")}
         this.playerImg = {src: loadImage("images/night-king-png.png")}
         this.aryaImg = {src: loadImage("images/transparent.png")}
         this.branImg = {src: loadImage("images/brandon-stark.png")};
+    }
+    upgrateScore() {
+        this.playerScore++;
+        document.getElementById("score").innerText = this.playerScore;
+    }
+    resetScore(){
+        this.playerScore = 0;
+        document.getElementById("score").innerText = this.playerScore;
     }
     drawingGame() {
         clear();
@@ -48,6 +56,7 @@ class Game {
         this.obstacles = this.obstacles.filter((arya) => {
             if(arya.checkCollision(this.player)) {
                 alert("Game Over")
+                this.resetScore();
                 return false;
             }else {
                 // console.log("not colliding")
@@ -57,13 +66,11 @@ class Game {
         // For Bran
         this.scores = this.scores.filter((bran) => {
             if(bran.checkCollision(this.player)) {
-                document.getElementById(score)
-                console.log("scores")
+                this.upgrateScore();
                 return false;
             }else {
                 return true;
             }
         }) 
-    }    
+    }     
 }
-console.log(document.getElementById("score").innerText)
