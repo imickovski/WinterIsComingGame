@@ -57,7 +57,8 @@ class Game {
         // For Bran
         this.scores = this.scores.filter((bran) => {
             if(bran.checkCollision(this.player)) {
-                // theScore += 1
+                document.getElementById(score)
+                console.log("scores")
                 return false;
             }else {
                 return true;
@@ -65,4 +66,4 @@ class Game {
         }) 
     }    
 }
-console.log(theScore)
+console.log(document.getElementById("score").innerText)
