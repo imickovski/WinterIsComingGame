@@ -7,10 +7,10 @@ class Game {
         this.scores = [];
     }
     preloadGame() {
-        this.backgroundImg = {src: loadImage("/images/background.jpg")}
-        this.playerImg = {src: loadImage("/images/night-king-png.png")}
-        this.aryaImg = {src: loadImage("/images/transparent.png")}
-        this.branImg = {src: loadImage("/images/brandon-stark.png")};
+        this.backgroundImg = {src: loadImage("images/background.jpg")}
+        this.playerImg = {src: loadImage("images/night-king-png.png")}
+        this.aryaImg = {src: loadImage("images/transparent.png")}
+        this.branImg = {src: loadImage("images/brandon-stark.png")};
     }
     drawingGame() {
         clear();
