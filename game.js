@@ -13,7 +13,7 @@ class Game {
         this.playerImg = {src: loadImage("images/night-king-png.png")};
         this.aryaImg = {src: loadImage("images/transparent.png")};
         this.branImg = {src: loadImage("images/brandon-stark.png")};
-        
+
         // this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")};
         this.aryaWinsImg = {src: loadImage("images/Jon Snow.gif")};
     }
@@ -27,12 +27,15 @@ class Game {
     }
     resetScore(){
         this.playerScore = 0;
+        this.obstacles = [];
+        this.scores = [];
         document.getElementById("score").innerText = this.playerScore;
         document.getElementById("totalScore").innerText = this.playerScore;
+        this.player.col = 450;
+        this.player.row = 500;
         
     }
     drawingGame() {
-        clear();
         frameRate(150);
         this.background.drawingBackground();
         this.player.drawingThePlayer();
@@ -65,7 +68,7 @@ class Game {
         // For Arya
         this.obstacles = this.obstacles.filter((arya) => {
             if(arya.checkCollision(this.player)) {
-                gameStart++;
+                gameStart += 1;
                 return false;
             }else {
                 return true;

@@ -15,7 +15,7 @@ function setup() {
 document.querySelector(".start").addEventListener("click", start)
 function start() {
     document.getElementById("begin-button").style.display = "none"
-    gameStart++;
+    gameStart += 1;
 }
 
 // Play again Button
@@ -23,8 +23,11 @@ document.getElementById("try-again").addEventListener("click", startAgain)
 function startAgain() {
     document.getElementById("try-again").style.display = "none";
     document.querySelector(".start-again").style.display = "none";
-    gameStart = 1;
+    gameStart -= 1;
+    console.log(game.obstacles, "obstacles 1")
     game.resetScore();
+    console.log(game.obstacles, "obstacles 2")
+    // window.location.reload();
 }
 
 function draw() {
