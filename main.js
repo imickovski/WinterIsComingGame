@@ -18,12 +18,13 @@ function start() {
     gameStart++;
 }
 
-// Try again Button
+// Play again Button
 document.getElementById("try-again").addEventListener("click", startAgain)
 function startAgain() {
     document.getElementById("try-again").style.display = "none";
     document.querySelector(".start-again").style.display = "none";
     gameStart = 1;
+    game.resetScore();
 }
 
 function draw() {

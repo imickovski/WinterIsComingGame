@@ -15,10 +15,7 @@ class Obstacles {
         let playerRightSide = player.col + player.width;
         let playerTopSide = player.row;
         let playerBottomSide = player.row + player.heigth;
-        // console.log(playerLeftSide, playerRightSide, playerTopSide,playerBottomSide)
-        //    console.log(player)
-        // console.log(width)
-        
+
         let xCollision =
         leftSide > playerLeftSide -30  &&
         leftSide < playerRightSide +30 &&
@@ -40,6 +37,5 @@ class Obstacles {
     drawingObstacles() {
         this.y += 2;
         image(game.aryaImg.src, this.x, this.y, this.width, this.height)
-        // image(game.branImg.src, this.i, this.y, this.width, this.height)
     }
 }

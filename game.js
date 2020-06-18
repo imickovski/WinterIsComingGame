@@ -9,14 +9,11 @@ class Game {
     preloadGame() {
         // this.backgroundImg = {src: loadImage("images/background.jpg")};
         this.backgroundImg = {src: loadImage("images/wall-goes-down.gif")};
-        // this.backgroundImg = [
-        //     {src: loadImage("images/wall-goes-down.gif"), x:0, y:0, speed:0},
-        //     {src: loadImage("images/wall-goes-down.gif"), x:0, y:0, speed:1},
-        //     {src: loadImage("images/wall-goes-down.gif"), x:0, y:0, speed:2},
-        // ] 
+
         this.playerImg = {src: loadImage("images/night-king-png.png")};
         this.aryaImg = {src: loadImage("images/transparent.png")};
         this.branImg = {src: loadImage("images/brandon-stark.png")};
+        
         // this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")};
         this.aryaWinsImg = {src: loadImage("images/Jon Snow.gif")};
     }
@@ -31,6 +28,8 @@ class Game {
     resetScore(){
         this.playerScore = 0;
         document.getElementById("score").innerText = this.playerScore;
+        document.getElementById("totalScore").innerText = this.playerScore;
+        
     }
     drawingGame() {
         clear();
@@ -67,7 +66,6 @@ class Game {
         this.obstacles = this.obstacles.filter((arya) => {
             if(arya.checkCollision(this.player)) {
                 gameStart++;
-                this.resetScore();
                 return false;
             }else {
                 return true;
