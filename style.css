@@ -36,6 +36,7 @@ body {
 }
 
 .start-again {
+    display: none;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -43,7 +44,6 @@ body {
 
 .start-again p{
     font-size: x-large;
-    background-color: rgb(38, 53, 70);
     color: rgb(188, 228, 221);
 }
 
@@ -57,5 +57,5 @@ body {
     border: 3px solid rgb(176, 176, 202);
     position: absolute;
     margin-top: 500px;
-    margin-left: -230px;
+    margin-left: 400px;
 }

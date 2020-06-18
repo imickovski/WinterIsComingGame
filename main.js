@@ -18,27 +18,21 @@ function start() {
     gameStart++;
 }
 
-// Display Score
-document.querySelector(".start-again p").style.display = "none";
-console.log(document.querySelector(".start-again p"))
-
 // Try again Button
 document.getElementById("try-again").addEventListener("click", startAgain)
 function startAgain() {
     document.getElementById("try-again").style.display = "none";
-    document.querySelector(".start-again p").style.display = "none";
+    document.querySelector(".start-again").style.display = "none";
     gameStart = 1;
 }
-
-console.log(document.getElementById("totalScore").innerText = game.playerScore)
 
 function draw() {
     if(gameStart==1) {
        game.drawingGame();
     }
-    if(gameStart==2) { 
-        document.getElementById("try-again").style.display = "inline"
-        document.querySelector(".start-again p").style.display = "inline";
+    if(gameStart==2) {
+        document.getElementById("try-again").style.display = "inline";
+        document.querySelector(".start-again").style.display = "inline";
         game.defeatImg();
     }
     if (keyIsDown(37)) {

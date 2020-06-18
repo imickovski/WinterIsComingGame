@@ -19,6 +19,7 @@ class Game {
     upgrateScore() {
         this.playerScore++;
         document.getElementById("score").innerText = this.playerScore;
+        document.getElementById("totalScore").innerText = this.playerScore;
     }
     resetScore(){
         this.playerScore = 0;
