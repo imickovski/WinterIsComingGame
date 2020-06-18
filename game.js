@@ -7,11 +7,18 @@ class Game {
         this.playerScore = 0;
     }
     preloadGame() {
-        this.backgroundImg = {src: loadImage("images/background.jpg")};
+        // this.backgroundImg = {src: loadImage("images/background.jpg")};
+        this.backgroundImg = {src: loadImage("images/wall-goes-down.gif")};
+        // this.backgroundImg = [
+        //     {src: loadImage("images/wall-goes-down.gif"), x:0, y:0, speed:0},
+        //     {src: loadImage("images/wall-goes-down.gif"), x:0, y:0, speed:1},
+        //     {src: loadImage("images/wall-goes-down.gif"), x:0, y:0, speed:2},
+        // ] 
         this.playerImg = {src: loadImage("images/night-king-png.png")};
         this.aryaImg = {src: loadImage("images/transparent.png")};
         this.branImg = {src: loadImage("images/brandon-stark.png")};
-        this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")};
+        // this.aryaWinsImg = {src: loadImage("images/arya-wins.jpg")};
+        this.aryaWinsImg = {src: loadImage("images/Jon Snow.gif")};
     }
     defeatImg(){
         image(this.aryaWinsImg.src, 0, 0, width, height)
@@ -27,7 +34,7 @@ class Game {
     }
     drawingGame() {
         clear();
-        frameRate(200);
+        frameRate(150);
         this.background.drawingBackground();
         this.player.drawingThePlayer();
         // When goes on the right off the canvas
@@ -63,7 +70,6 @@ class Game {
                 this.resetScore();
                 return false;
             }else {
-                // console.log("not colliding")
                 return true;
             }
         })
